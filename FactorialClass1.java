@@ -1,5 +1,4 @@
 public class FactorialClass1{
-    BigInteger integral = new BigInteger();
-    int a = 5;
     
+    public BigInteger integral = new BigInteger();
 }
