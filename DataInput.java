@@ -28,6 +28,19 @@ public final class DataInput {
 		
 	}
 	
+	public static Byte getByte(){
+		String s = "";
+
+		try{
+			s = getString();
+		}
+		catch(IOException exc){
+			exc.printStackTrace();
+		}
+		Byte value = Byte.valueOf(s);
+		return value;
+	}
+
 	public static String getString() throws IOException{
 		InputStreamReader isr = new InputStreamReader(System.in);
 		BufferedReader br = new BufferedReader(isr);

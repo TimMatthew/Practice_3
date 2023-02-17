@@ -1,9 +1,25 @@
-import java.math.BigInteger;
-
 public class Test{
 
-    public static void main(String[] args){
+    public static void main(String[] args)
+    {
         System.out.println("-BIGINTEGER FACTORAIL-");
+        System.out.println("What way do you wanna getfactorial?");
+        System.out.print("1-by BigInteger  2-by cashed data: ");
+        byte choice = DataInput.getByte();
+        
+        if(choice==1)
+            computeBigIntFactorial();
+        else if(choice==2)
+            computeCashedFactorial();
+    }
+
+    private static void computeCashedFactorial() 
+    {
+        
+    }
+
+    private static void computeBigIntFactorial() 
+    {
         System.out.print("Enter the positive number: ");
         int input = DataInput.getInt();
         
@@ -13,8 +29,7 @@ public class Test{
             input = DataInput.getInt();
         }
         
-        FactorialClass1.factorial = BigInteger.valueOf(input);
-        FactorialClass1.calculateFactorial(FactorialClass1.factorial);
-        System.out.println("Factorial of "+input+" number is "+FactorialClass1.factorial);
+        BigIntFactorial.calculateFactorial(input);
+        System.out.println("The factorial of "+input+" is "+BigIntFactorial.factorial);
     }
 }
